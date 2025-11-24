@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 export const useSpeech = () => {
   const [isListening, setIsListening] = useState(false);
@@ -76,7 +77,7 @@ export const useSpeech = () => {
 
         try {
           console.log('Enviando audio a Gemini...');
-          const response = await axios.post('http://localhost:3001/api/transcribe', formData, {
+          const response = await axios.post(`${API_BASE_URL}/api/transcribe`, formData, {
             headers: { 'Content-Type': 'multipart/form-data' }
           });
           

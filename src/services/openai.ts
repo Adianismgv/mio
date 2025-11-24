@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 // In a real app, this should be in an environment variable or a secure backend proxy.
 // For this demo, we'll ask the user to input it or use a placeholder.
@@ -11,7 +12,7 @@ export const getMashaResponse = async (userText: string): Promise<string> => {
   const key = localStorage.getItem('GOOGLE_API_KEY');
   
   try {
-    const response = await axios.post('http://localhost:3001/api/chat', {
+    const response = await axios.post(`${API_BASE_URL}/api/chat`, {
       message: userText,
       apiKey: key 
     });
