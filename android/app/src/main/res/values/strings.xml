@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Masha</string>
+    <string name="title_activity_main">Masha</string>
+    <string name="package_name">com.nelsonjpr.masha</string>
+    <string name="custom_url_scheme">com.nelsonjpr.masha</string>
+</resources>
